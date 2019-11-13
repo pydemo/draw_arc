@@ -31,11 +31,9 @@ class Example(wx.Frame):
 
 	def OnPaint(self, e):
 
-		#dc = wx.PaintDC(self)
 		pdc = wx.PaintDC(self)
 		dc = wx.GCDC(pdc)
-		dc.SetBrush(wx.Brush('#777'))
-		dc.SetPen(wx.Pen("#777"))
+
 		center= ( 200, 100)
 		radius= 100
 		angle= pi/4		
@@ -66,16 +64,7 @@ class Example(wx.Frame):
 			dc.SetBrush(wx.Brush('YELLOW'))
 			dc.DrawCircle(*center, 2)			
 		
-		if 0:
-			dc.DrawEllipse(20, 20, 90, 60)
-			dc.DrawRoundedRectangle(130, 20, 90, 60, 10)		
-			dc.DrawRectangle(20, 120, 80, 50)
-			dc.DrawPolygon(((130, 140), (180, 170), (180, 140), (220, 110), (140, 100)))
-			dc.DrawSpline(((240, 170), (280, 170), (285, 110), (325, 110)))
 
-			dc.DrawLines(((20, 260), (100, 260), (20, 210), (100, 210)))
-			dc.DrawCircle(170, 230, 35)
-			dc.DrawRectangle(250, 200, 60, 60)
 
 
 def main():
